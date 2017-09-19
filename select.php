@@ -4,7 +4,7 @@ $conn   = new mysqli("localhost", "root", "", "angular_crud");
 // Prazan niz
 $output = array();
 // Utimam sve iz baze
-$query  = "SELECT * FROM users";
+$query  = "SELECT * FROM users ORDER BY id DESC";
 $result = $conn->query($query);
 // Ako postoji podataka u bazi
 if($result->num_rows > 0){
@@ -13,5 +13,5 @@ if($result->num_rows > 0){
     }
     echo json_encode($output);
 }
-
+$conn->close();
 ?>
