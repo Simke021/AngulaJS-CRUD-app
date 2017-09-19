@@ -1,6 +1,5 @@
 <?php
-// Konekcija
-$conn   = new mysqli("localhost", "root", "", "angular_crud");
+require_once("config.php");
 // Prazan niz
 $output = array();
 // Utimam sve iz baze

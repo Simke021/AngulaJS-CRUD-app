@@ -1,6 +1,5 @@
 <?php
-// konekcija
-$conn = new mysqli("localhost", "root", "", "angular_crud");
+require_once("config.php");
 // data sa index strane
 $data = json_decode(file_get_contents("php://input"));
 

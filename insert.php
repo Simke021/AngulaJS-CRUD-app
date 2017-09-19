@@ -1,6 +1,5 @@
 <?php
-// konekcija sa bazom
-$conn = new mysqli("localhost", "root", "", "angular_crud");
+require_once("config.php");
 $data = json_decode(file_get_contents("php://input"));
 
 if(count($data) > 0){
