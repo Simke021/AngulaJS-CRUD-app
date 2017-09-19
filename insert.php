@@ -1,7 +1,6 @@
 <?php
 // konekcija sa bazom
 $conn = new mysqli("localhost", "root", "", "angular_crud");
-//
 $data = json_decode(file_get_contents("php://input"));
 
 if(count($data) > 0){
@@ -11,7 +10,7 @@ if(count($data) > 0){
 
     $query = "INSERT INTO users(f_name, l_name) VALUES ('$first_name', '$last_name')";
 
-    if(mysqli_query($conn, $query)){
+    if($conn->query($query) === TRUE){
         echo "Data Inserted Successfully.";
     }else{
         echo "Error. Pleasse try latter.";
